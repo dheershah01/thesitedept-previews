@@ -22,7 +22,7 @@ body{background:var(--bg);color:var(--ink);font:400 16px/1.55 var(--body);-webki
 img{display:block;max-width:100%}
 a{color:inherit}
 .wrap{max-width:1180px;margin:0 auto;padding:0 var(--pad)}
-.d{font-family:var(--display);font-weight:var(--dw);letter-spacing:var(--dls);line-height:var(--dlh);text-transform:var(--dtt);font-style:var(--dfs);overflow-wrap:break-word}
+.d{word-spacing:.04em;font-family:var(--display);font-weight:var(--dw);letter-spacing:var(--dls);line-height:var(--dlh);text-transform:var(--dtt);font-style:var(--dfs);overflow-wrap:break-word}
 .k{font:600 12px/1 var(--body);letter-spacing:.14em;text-transform:uppercase;color:var(--muted);display:flex;align-items:center;gap:10px}
 .k:before{content:"";width:22px;height:1px;background:currentColor;opacity:.6}
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;height:54px;padding:0 26px;border-radius:var(--radius);font:600 15px/1 var(--body);text-decoration:none;border:1px solid transparent;cursor:pointer;transition:transform .2s,background .2s;white-space:nowrap}
@@ -40,7 +40,7 @@ a{color:inherit}
 .brand img{height:34px;width:auto;max-width:180px;object-fit:contain}
 .brand .mark{width:36px;height:36px;border-radius:50%;background:var(--accent);color:var(--accent-ink);display:grid;place-items:center;font:700 15px/1 var(--body);flex:none}
 .navcall{display:inline-flex;align-items:center;gap:8px;height:40px;padding:0 16px;border-radius:999px;background:rgba(255,255,255,.14);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.28);color:#fff;text-decoration:none;font:600 14px/1 var(--body)}
-.navcall svg{width:16px;height:16px}
+.navcall svg{width:16px;height:16px}.navcall{white-space:nowrap}@media(max-width:420px){.navcall .num{display:none}.navcall:after{content:'Call'}}
 .navlinks{display:none;gap:28px;font:500 14px/1 var(--body)}
 .navlinks a{text-decoration:none;opacity:.9}
 @media(min-width:900px){.navlinks{display:flex}}
@@ -48,16 +48,15 @@ a{color:inherit}
 .hero{position:relative;min-height:min(92svh,860px);display:flex;align-items:flex-end;color:#fff;background:#222;overflow:hidden}
 .hero .ph{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1.04);animation:hz 14s ease-out forwards}
 @keyframes hz{to{transform:scale(1)}}
-.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.55) 0%,rgba(0,0,0,.08) 28%,rgba(0,0,0,.18) 50%,rgba(0,0,0,.82) 100%)}
+.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.6) 0%,rgba(0,0,0,.12) 24%,rgba(0,0,0,.35) 46%,rgba(0,0,0,.86) 72%,rgba(0,0,0,.92) 100%)}
 .hero .wrap{position:relative;z-index:2;width:100%;padding-bottom:clamp(34px,6vw,72px);padding-top:120px}
 .hero .loc{display:inline-flex;align-items:center;gap:8px;font:500 13px/1 var(--body);padding:8px 13px;border-radius:999px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.25);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);margin-bottom:22px}
 .hero .loc i{width:7px;height:7px;border-radius:50%;background:var(--accent);display:block}
 .hero h1{font-size:clamp(46px,12.5vw,128px);max-width:11ch}
 body[data-theme=restaurant] .hero h1{font-size:clamp(50px,14vw,150px)}
 body[data-theme=fitness] .hero h1{font-size:clamp(48px,13.5vw,140px)}
-.hero h1 em{font-style:var(--dfs);color:var(--accent);display:block}
+.hero h1 em{font-style:var(--dfs);color:#fff;opacity:.78;display:block}
 body[data-theme=barber] .hero h1 em,body[data-theme=salon] .hero h1 em,body[data-theme=cafe] .hero h1 em{font-style:italic}
-body[data-theme=salon] .hero h1 em,body[data-theme=cafe] .hero h1 em,body[data-theme=restaurant] .hero h1 em{color:#fff;opacity:.92}
 .hero p.lead{font-size:clamp(16px,2.1vw,19px);line-height:1.5;max-width:46ch;margin:22px 0 28px;color:rgba(255,255,255,.88)}
 .hero .ctas{display:flex;gap:12px;flex-wrap:wrap}
 .hero .btn-l{color:#fff;border-color:rgba(255,255,255,.55);backdrop-filter:blur(6px)}
@@ -227,7 +226,7 @@ $('pv').innerHTML='Free website preview made for <b>'+esc(D.name)+'</b> by The S
 // brand
 $('brand').innerHTML=D.logo?'<img src="'+esc(D.logo)+'" alt="'+esc(D.name)+'">':'<span class="mark">'+esc((D.shortName||D.name).replace(/[^A-Za-z0-9 ]/g,'').split(' ').filter(Boolean).slice(0,2).map(function(w){return w[0]}).join('').toUpperCase())+'</span><span>'+esc(D.shortName||D.name)+'</span>';
 $('navlinks').innerHTML='<a href="#services">'+esc(D.servicesTitle)+'</a>'+(D.reviews&&D.reviews.length?'<a href="#reviews">Reviews</a>':'')+'<a href="#contact">Contact</a>';
-if(tel){$('navcall').href=tel;$('navcall').innerHTML=ICON.phone+'<span>'+esc(D.phoneDisplay||D.phone)+'</span>'}else{$('navcall').href=primary;$('navcall').textContent=primaryLbl}
+if(tel){$('navcall').href=tel;$('navcall').innerHTML=ICON.phone+'<span class="num">'+esc(D.phoneDisplay||D.phone)+'</span>'}else{$('navcall').href=primary;$('navcall').textContent=primaryLbl}
 // hero
 $('heroImg').src=D.photos.hero;$('heroImg').alt=D.photos.heroAlt||'';
 if(D.photos.heroPos)$('heroImg').style.objectPosition=D.photos.heroPos;

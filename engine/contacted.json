@@ -1,0 +1,7 @@
+{"note": "Companies House numbers already drafted/contacted. Never email these again unless they reply.",
+ "contacted": [
+  {"company_number": "12827654", "name": "Unison Electrical Ltd", "drafted": "2026-11-12", "status": "draft"},
+  {"company_number": "10848814", "name": "Meridian Heating & Plumbing Ltd", "drafted": "2026-11-12", "status": "draft"},
+  {"company_number": "14875112", "name": "Tysoe Resto Shed Ltd", "drafted": "2026-11-12", "status": "draft"}
+ ],
+ "suppressed": []}

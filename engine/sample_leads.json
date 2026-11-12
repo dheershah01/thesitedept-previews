@@ -1,0 +1,232 @@
+[
+ {
+  "id": "unison",
+  "name": "Unison Electrical",
+  "slug": "unison-electrical",
+  "theme": "trades",
+  "stock": "electrician",
+  "accent": "#2350F5",
+  "logo": "https://unisonelectrical.co.uk/images/light-vertical-logo.png",
+  "kicker": "Electricians · Warwick",
+  "headline": [
+   "Safe, certified",
+   "electrical work."
+  ],
+  "intro": "A team of certified electricians based in Warwick. Domestic, commercial and emergency work, quoted clearly and done properly.",
+  "phone": "+44 7342 525454",
+  "email": "info@unisonelectrical.co.uk",
+  "rating": 5.0,
+  "rating_count": 24,
+  "reviews_clean": [
+   {
+    "text": "Really good and fast service. Mo was available the same day I contacted him and completed the job. Very friendly and professional.",
+    "who": "Google review"
+   },
+   {
+    "text": "We had some exterior down lighting installed and the result was amazing.",
+    "who": "Google review"
+   },
+   {
+    "text": "Installed new spotlights in my renovated bathroom, along with some other electrical work. Done very clean and efficiently.",
+    "who": "Google review"
+   }
+  ],
+  "facts": [
+   [
+    "5.0 ★",
+    "from 24 Google reviews"
+   ],
+   [
+    "TrustMark",
+    "approved contractor"
+   ],
+   [
+    "Since 2020",
+    "Unison Electrical Ltd"
+   ],
+   [
+    "Emergency",
+    "call-outs available"
+   ]
+  ],
+  "services": [
+   [
+    "Domestic electrics",
+    "Lighting, sockets, fuse boards and fault-finding at home"
+   ],
+   [
+    "Emergency call-outs",
+    "No power, tripping or burning smell? We’ll come out"
+   ],
+   [
+    "EV charger installation",
+    "Home charge points, fitted and certified"
+   ],
+   [
+    "Home rewires",
+    "Full or partial, planned around you"
+   ],
+   [
+    "Testing & inspection",
+    "EICRs for homeowners and landlords"
+   ],
+   [
+    "Commercial & PAT testing",
+    "Shops, offices and landlords"
+   ],
+   [
+    "Smart homes",
+    "Smart lighting, heating and security"
+   ]
+  ],
+  "services_note": "Prices to add: send us your starting prices and they’ll appear here.",
+  "areas": [
+   "Warwick",
+   "Leamington Spa",
+   "Solihull",
+   "Birmingham",
+   "Hinckley"
+  ],
+  "about_line": "Domestic, commercial and industrial work across Warwickshire and the West Midlands.",
+  "maps_query": "Unison Electrical Ltd, Warwick CV34",
+  "address_short": "Warwick, Warwickshire",
+  "company_line": "Unison Electrical Ltd · Co. no. 12827654",
+  "cta_title": "Need an electrician in Warwick?",
+  "contact_title": "Get in touch."
+ },
+ {
+  "id": "meridian",
+  "name": "Meridian Heating & Plumbing",
+  "short_name": "Meridian Heating",
+  "slug": "meridian-heating",
+  "theme": "trades",
+  "stock": "heating",
+  "accent": "#E2552A",
+  "kicker": "Heating & plumbing engineers",
+  "headline": [
+   "Warm home.",
+   "No fuss."
+  ],
+  "intro": "Boilers, central heating and plumbing from Meridian. Clear prices, tidy work and a straight answer when you call.",
+  "phone": "07817100449",
+  "email": "ian@meridianheating.co.uk",
+  "whatsapp": true,
+  "facts": [
+   [
+    "Since 2017",
+    "Meridian Heating & Plumbing Ltd"
+   ],
+   [
+    "Heating",
+    "boilers, radiators and controls"
+   ],
+   [
+    "Plumbing",
+    "bathrooms, toilets, sinks and leaks"
+   ],
+   [
+    "Direct line",
+    "speak to the engineer"
+   ]
+  ],
+  "services": [
+   [
+    "Boiler installation",
+    "New and replacement boilers, fitted properly"
+   ],
+   [
+    "Boiler servicing & repairs",
+    "Annual services and breakdowns"
+   ],
+   [
+    "Central heating",
+    "Radiators, controls and power flushing"
+   ],
+   [
+    "Bathrooms, toilets & sinks",
+    "Installation and replacement"
+   ],
+   [
+    "Leaks & general plumbing",
+    "Fast help when something goes wrong"
+   ]
+  ],
+  "services_note": "Prices and accreditations to add: send them over and they’ll appear here.",
+  "maps_query": "",
+  "address_short": "",
+  "company_line": "Meridian Heating & Plumbing Ltd · Co. no. 10848814",
+  "cta_title": "Boiler playing up? Let’s sort it."
+ },
+ {
+  "id": "tysoe",
+  "name": "Tysoe Resto Shed",
+  "slug": "tysoe-resto-shed",
+  "theme": "trades",
+  "stock": "car",
+  "accent": "#B8894A",
+  "kicker": "Restoration · Lower Tysoe, Warwickshire",
+  "headline": [
+   "Restored",
+   "the right way."
+  ],
+  "intro": "A local restoration workshop at Orchard Farm Nursery in Lower Tysoe. Tell us about your project and we’ll talk it through.",
+  "phone": "01295 680391",
+  "whatsapp": false,
+  "email": "info@tysoerestoshed.co.uk",
+  "facts": [
+   [
+    "Local",
+    "Lower Tysoe, South Warwickshire"
+   ],
+   [
+    "Since 2023",
+    "Tysoe Resto Shed Ltd"
+   ],
+   [
+    "Car restoration",
+    "projects big and small"
+   ],
+   [
+    "Free chat",
+    "about your project"
+   ]
+  ],
+  "services": [
+   [
+    "Restoration projects",
+    "Tell us what you’ve got and what you want it to be"
+   ],
+   [
+    "Car restoration",
+    "From tired to proud: bodywork, mechanics and finish"
+   ],
+   [
+    "Repairs & refurbishment",
+    "Sympathetic work that keeps the character"
+   ],
+   [
+    "Project assessment",
+    "Not sure where to start? We’ll take a look and advise"
+   ]
+  ],
+  "services_note": "Photos of your past projects and your full service list go here.",
+  "maps_query": "Orchard Farm Nursery, Lower Tysoe, CV35 0BU",
+  "address_short": "Orchard Farm Nursery, Lower Tysoe CV35 0BU",
+  "company_line": "Tysoe Resto Shed Ltd · Co. no. 14875112",
+  "cta_title": "Got a project in mind?",
+  "steps": [
+   [
+    "Tell us about it",
+    "Call or send a few photos of what you’ve got."
+   ],
+   [
+    "We talk it through",
+    "What’s possible, how long, and a clear idea of cost."
+   ],
+   [
+    "We get to work",
+    "Careful, honest restoration, with updates as we go."
+   ]
+  ]
+ }
+]

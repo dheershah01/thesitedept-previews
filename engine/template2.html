@@ -15,6 +15,8 @@ body[data-theme=barber]{--bg:#EFE8DE;--bg2:#E4DACB;--ink:#151413;--muted:#5d564e
 body[data-theme=salon]{--bg:#F6F1EB;--bg2:#ECE3D8;--ink:#1D2A23;--muted:#5a6660;--line:rgba(29,42,35,.15);--accent:#2F5D4A;--dark:#1D2A23;--on-dark:#F6F1EB;--display:'Fraunces',Georgia,serif;--dw:400;--dls:-.03em;--dlh:.98}
 body[data-theme=restaurant]{--bg:#F4ECDF;--bg2:#EADDC8;--ink:#2A1D16;--muted:#6b5a4e;--line:rgba(42,29,22,.16);--accent:#8E2F1C;--dark:#2A1D16;--on-dark:#F4ECDF;--display:'Anton',Impact,sans-serif;--dw:400;--dls:.005em;--dlh:.98;--dtt:uppercase;--radius:6px}
 body[data-theme=cafe]{--bg:#F3EADD;--bg2:#E9DBC6;--ink:#3A2317;--muted:#6e5646;--line:rgba(58,35,23,.16);--accent:#B4532D;--dark:#3A2317;--on-dark:#F3EADD;--display:'Fraunces',Georgia,serif;--dw:500;--dls:-.035em;--dlh:.95;--body:'DM Sans',system-ui,sans-serif}
+body[data-theme=dining]{--bg:#F4EEE4;--bg2:#EADFCF;--ink:#1E1714;--muted:#6A5C52;--line:rgba(30,23,20,.15);--accent:#B8862F;--dark:#17110E;--on-dark:#F4EEE4;--display:'Playfair Display',Georgia,serif;--dw:500;--dls:-.02em;--dlh:1;--radius:999px}
+body[data-theme=dining] .hero h1 em{font-style:italic;opacity:.85}
 body[data-theme=fitness]{--bg:#F1F1EE;--bg2:#E5E5E0;--ink:#0D0D0D;--muted:#55575a;--line:rgba(13,13,13,.14);--accent:#C8F23C;--accent-ink:#0D0D0D;--dark:#0D0D0D;--on-dark:#F1F1EE;--dw:800;--dls:-.045em;--dlh:.88;--dtt:uppercase}
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
@@ -234,7 +236,8 @@ $('loc').textContent=D.kicker;
 $('h1').innerHTML=esc(D.headline[0])+'<em>'+esc(D.headline[1])+'</em>';
 $('lead').textContent=D.intro;
 var heroC='<a class="btn btn-a" href="'+esc(primary)+'">'+esc(primaryLbl)+'</a>';
-if(tel&&primary!==tel)heroC+='<a class="btn btn-l" href="'+tel+'">'+ICON.phone+'Call '+esc(D.phoneDisplay||D.phone)+'</a>';
+if(D.order&&D.order.url)heroC+='<a class="btn btn-l" href="'+esc(D.order.url)+'">'+esc(D.order.label||'Order online')+'</a>';
+else if(tel&&primary!==tel)heroC+='<a class="btn btn-l" href="'+tel+'">'+ICON.phone+'Call '+esc(D.phoneDisplay||D.phone)+'</a>';
 else heroC+='<a class="btn btn-l" href="#services">'+esc(D.secondaryLabel||'See more')+'</a>';
 $('heroCtas').innerHTML=heroC;
 if(D.rating){$('heroRate').innerHTML='<span class="stars">★★★★★</span><span><b>'+esc(D.rating)+'</b> from '+esc(D.reviewCount)+' Google reviews</span>'}else $('heroRate').remove();
@@ -283,14 +286,14 @@ $('cardB').id='quote';
 $('quote').innerHTML='<h3>'+esc(D.formTitle||'Ask for a quote')+'</h3><form class="form" onsubmit="event.preventDefault();this.style.display=\'none\';this.nextElementSibling.style.display=\'block\'"><input required placeholder="Your name" autocomplete="name"><input required placeholder="Phone or email"><textarea placeholder="'+esc(D.formPlaceholder||'What do you need?')+'"></textarea><button class="btn btn-a" type="submit">'+esc(D.formButton||'Send')+'</button></form><div class="fmsg">This is a preview, so nothing was sent. On the live site, messages from this form go straight to your inbox.</div>';
 // cta band
 $('ctaK').textContent=D.kicker;$('ctaT').textContent=D.ctaTitle||'Ready when you are.';
-$('ctaB').innerHTML=(tel?'<a class="btn btn-a" href="'+tel+'">'+ICON.phone+'Call now</a>':'')+'<a class="btn btn-l" href="'+esc(primary)+'">'+esc(primaryLbl)+'</a>';
+$('ctaB').innerHTML=(tel?'<a class="btn btn-a" href="'+tel+'">'+ICON.phone+'Call now</a>':'')+'<a class="btn btn-l" href="'+esc(primary)+'">'+esc(primaryLbl)+'</a>'+(D.order&&D.order.url?'<a class="btn btn-l" href="'+esc(D.order.url)+'">'+esc(D.order.label||'Order online')+'</a>':'');
 // footer
 $('fn').textContent=D.shortName||D.name;
 $('frow').innerHTML=[D.addressShort,D.phoneDisplay||D.phone,D.email,D.companyLine].filter(Boolean).map(function(x){return '<span>'+esc(x)+'</span>'}).join('')+'<span>© '+new Date().getFullYear()+'</span>';
 // pitch
-$('pitch').innerHTML='<h3>Like what you see?</h3><p>This is a free preview made for '+esc(D.name)+' by <b>The Site Dept.</b> It isn’t live, and it isn’t affiliated with the business. '+(D.photos.stock?'The photos are placeholders; we’d swap in your own. ':'')+'If you’d like it on your own domain, it can be live within a week, with your real prices, photos and details.</p><p>'+(D.pitchEmail?'Reply to the email this came with, or <a href="mailto:'+esc(D.pitchEmail)+'?subject='+encodeURIComponent('Website for '+D.name)+'">email '+esc(D.pitchName||'us')+'</a>.':'Just reply to the email this link came with.')+'</p>';
+$('pitch').innerHTML='<h3>Like what you see?</h3><p>This is a free preview made for '+esc(D.name)+' by <b>The Site Dept.</b> It isn’t live, and it isn’t affiliated with the business. '+(D.photos.stock?'The photos are placeholders; we’d swap in your own. ':'')+'If you’d like it on your own domain, it can be live within a week, with your real prices, photos and details.'+(D.pitchNote?' '+esc(D.pitchNote):'')+'</p><p>'+(D.pitchEmail?'Reply to the email this came with, or <a href="mailto:'+esc(D.pitchEmail)+'?subject='+encodeURIComponent('Website for '+D.name)+'">email '+esc(D.pitchName||'us')+'</a>.':'Just reply to the email this link came with.')+'</p>';
 // sticky bar
-$('sticky').innerHTML=(tel?'<a class="btn btn-l" href="'+tel+'">'+ICON.phone+'Call</a>':'<a class="btn btn-l" href="#contact">Contact</a>')+'<a class="btn btn-a" href="'+esc(primary)+'">'+esc(D.stickyLabel||primaryLbl)+'</a>';
+$('sticky').innerHTML=(D.order&&D.order.url?'<a class="btn btn-l" href="'+esc(D.order.url)+'">'+esc(D.order.short||'Order')+'</a>':tel?'<a class="btn btn-l" href="'+tel+'">'+ICON.phone+'Call</a>':'<a class="btn btn-l" href="#contact">Contact</a>')+'<a class="btn btn-a" href="'+esc(primary)+'">'+esc(D.stickyLabel||primaryLbl)+'</a>';
 var st=$('sticky');addEventListener('scroll',function(){st.classList.toggle('on',scrollY>window.innerHeight*.6)},{passive:true});
 // reveal
 var io='IntersectionObserver' in window?new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px'}):null;

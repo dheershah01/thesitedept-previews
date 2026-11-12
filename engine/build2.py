@@ -29,6 +29,10 @@ STOCK = {
     "salon":       ["photo-1633681926022-84c23e8cb2d6", "photo-1580618672591-eb180b1a973f", "photo-1634449571010-02389ed0f9b0", "photo-1562322140-8baeececf3df"],
     "restaurant":  ["photo-1517248135467-4c7edcad34c4", "photo-1414235077428-338989a2e8c0", "photo-1544025162-d76694265947", "photo-1600891964599-f61ba0e24092"],
     "cafe":        ["photo-1554118811-1e0d58224f24", "photo-1541167760496-1628856ab772", "photo-1623334044303-241021148842", "photo-1600093463592-8e36ae95ef56"],
+    "indian":      ["photo-1552960226-639240203497", "photo-1565557623262-b51c2513a641", "photo-1631452180539-96aca7d48617", "photo-1603894584373-5ac82b2ae398"],
+    "thai":        ["photo-1526234362653-3b75a0c07438", "photo-1548943487-a2e4e43b4853", "photo-1675150277436-9c7348972c11", "photo-1562565652-a0d8f0c59eb4"],
+    "turkish":     ["photo-1730082460730-573793ec7c8f", "photo-1532636875304-0c89119d9b4d", "photo-1653982960203-c8361d7bed96", "photo-1631054235886-c40c45b03f01"],
+    "moroccan":    ["photo-1785734290864-eca98549d0b6", "photo-1661083098412-054431ab7112", "photo-1653983194833-7a10838b12f4", "photo-1541518763669-27fef04b14ea"],
     "fitness":     ["photo-1534438327276-14e5300c3a48", "photo-1758875569256-f37c438cac65", "photo-1517838277536-f5f99be501cd", "photo-1623874514711-0f321325f318"],
 }
 
@@ -39,6 +43,7 @@ FONTS = {
     "salon":      "family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..600&family=Inter:wght@400;500;600;700",
     "cafe":       "family=Fraunces:ital,opsz,wght@0,9..144,400..600;1,9..144,400..600&family=DM+Sans:wght@400;500;600;700",
     "restaurant": "family=Anton&family=Inter:wght@400;500;600;700",
+    "dining":     "family=Playfair+Display:ital,wght@0,400..700;1,400..700&family=Inter:wght@400;500;600;700",
 }
 
 THEME = {
@@ -73,6 +78,12 @@ THEME = {
                ("Order ahead", "Skip the queue on busy mornings."),
                ("Collect & go", "Or stay a while.")],
         cta_title="Coffee’s on.", form_title="Get in touch", form_btn="Send", form_ph="Catering, events or a question", sticky="Menu"),
+    "dining": dict(cta="Book a table", kicker_svc="From the menu", title_svc="House favourites",
+        steps_title="Your table is waiting.",
+        steps=[("Book a table", "Call or book online in seconds."),
+               ("Come hungry", "Everything cooked fresh, to order."),
+               ("Or eat at home", "Order online for collection, straight to our kitchen.")],
+        cta_title="Book your table this week.", form_title="Ask about a booking", form_btn="Send request", form_ph="Date, time, number of guests, any occasion", sticky="Book a table"),
     "fitness": dict(cta="Book a free consult", kicker_svc="Ways to train", title_svc="Plans",
         steps_title="Start this week.",
         steps=[("Free consultation", "Talk through your goals. No pressure, no hard sell."),
@@ -141,6 +152,8 @@ def build(lead):
         "ctaTitle": L.get("cta_title") or T["cta_title"],
         "stickyLabel": T["sticky"],
         "companyLine": L.get("company_line") or "",
+        "order": L.get("order"),
+        "pitchNote": L.get("pitch_note") or "",
         "pitchEmail": CFG.get("sender_email", ""), "pitchName": CFG.get("sender_name", "us"),
     }
     fonts = f'<link href="https://fonts.googleapis.com/css2?{FONTS[theme]}&display=swap" rel="stylesheet">'

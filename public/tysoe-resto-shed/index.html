@@ -1,166 +1,301 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-GB">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="robots" content="noindex, nofollow">
 <title>Tysoe Resto Shed | Website preview</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@800;900&family=Hanken+Grotesk:wght@400;500;600;700&family=Bodoni+Moda:ital,opsz,wght@0,6..96,500;1,6..96,500&family=Jost:wght@400;500;600&family=Young+Serif&family=Figtree:wght@400;600;700&family=Bricolage+Grotesque:opsz,wght@12..96,800&family=Nunito+Sans:wght@400;600;700&family=Barlow+Condensed:wght@800&family=Barlow:wght@400;500;600;700&family=Archivo:wdth,wght@62..125,900&family=Manrope:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://images.unsplash.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-/* One renderer, six themes (barber, salon, restaurant, cafe, trades, fitness). Theme tokens set on <body data-theme>. */
+:root{--bg:#F3F1EC;--bg2:#E9E6DF;--ink:#121418;--muted:#5B5F66;--line:rgba(18,20,24,.14);--accent:#2448FF;--accent-ink:#fff;--dark:#121418;--on-dark:#F3F1EC;
+--display:'Archivo',system-ui,sans-serif;--body:'Inter',system-ui,sans-serif;--dw:700;--dls:-.035em;--dlh:.95;--dtt:none;--dfs:normal;--radius:999px;--card-radius:18px;--pad:clamp(20px,5vw,64px)}
+body[data-theme=barber]{--bg:#EFE8DE;--bg2:#E4DACB;--ink:#151413;--muted:#5d564e;--line:rgba(21,20,19,.16);--accent:#E4572E;--dark:#151413;--on-dark:#EFE8DE;--display:'Instrument Serif',Georgia,serif;--dw:400;--dls:-.02em;--dlh:.92;--dfs:italic}
+body[data-theme=salon]{--bg:#F6F1EB;--bg2:#ECE3D8;--ink:#1D2A23;--muted:#5a6660;--line:rgba(29,42,35,.15);--accent:#2F5D4A;--dark:#1D2A23;--on-dark:#F6F1EB;--display:'Fraunces',Georgia,serif;--dw:400;--dls:-.03em;--dlh:.98}
+body[data-theme=restaurant]{--bg:#F4ECDF;--bg2:#EADDC8;--ink:#2A1D16;--muted:#6b5a4e;--line:rgba(42,29,22,.16);--accent:#8E2F1C;--dark:#2A1D16;--on-dark:#F4ECDF;--display:'Anton',Impact,sans-serif;--dw:400;--dls:.005em;--dlh:.98;--dtt:uppercase;--radius:6px}
+body[data-theme=cafe]{--bg:#F3EADD;--bg2:#E9DBC6;--ink:#3A2317;--muted:#6e5646;--line:rgba(58,35,23,.16);--accent:#B4532D;--dark:#3A2317;--on-dark:#F3EADD;--display:'Fraunces',Georgia,serif;--dw:500;--dls:-.035em;--dlh:.95;--body:'DM Sans',system-ui,sans-serif}
+body[data-theme=fitness]{--bg:#F1F1EE;--bg2:#E5E5E0;--ink:#0D0D0D;--muted:#55575a;--line:rgba(13,13,13,.14);--accent:#C8F23C;--accent-ink:#0D0D0D;--dark:#0D0D0D;--on-dark:#F1F1EE;--dw:800;--dls:-.045em;--dlh:.88;--dtt:uppercase}
 *{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased;padding-bottom:84px;background:var(--bg);color:var(--ink);font-family:var(--body)}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--ink);font:400 16px/1.55 var(--body);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%}
 a{color:inherit}
-.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
-:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
-h1,h2,h3{font-family:var(--display);font-weight:var(--dw);line-height:var(--dlh);text-transform:var(--dtt);letter-spacing:var(--dls);text-wrap:balance}
-body[data-theme=barber]{--bg:#F2EFE9;--ink:#151515;--accent:#C8102E;--accent2:#1E3557;--mute:#67635C;--line:#D9D4CA;--card:#FBFAF7;--onaccent:#fff;--display:"Big Shoulders Display","Arial Narrow",Impact,sans-serif;--dw:900;--dlh:.9;--dtt:uppercase;--dls:0;--body:"Hanken Grotesk",system-ui,sans-serif;--radius:999px;--hero:clamp(56px,15vw,170px);color-scheme:light}
-body[data-theme=salon]{--bg:#FBF7F4;--ink:#2A1626;--accent:#C9707F;--accent2:#3B1E35;--mute:#7C6676;--line:#EADCE2;--card:#fff;--onaccent:#fff;--display:"Bodoni Moda",Didot,Georgia,serif;--dw:500;--dlh:1.04;--dtt:none;--dls:0;--body:"Jost",system-ui,sans-serif;--radius:999px;--hero:clamp(44px,8.5vw,88px);color-scheme:light}
-body[data-theme=restaurant]{--bg:#12241D;--ink:#F4EFE6;--accent:#F2A93B;--accent2:#1A3329;--mute:#A9B5AD;--line:#2A4339;--card:#1A3329;--onaccent:#12241D;--display:"Young Serif",Georgia,serif;--dw:400;--dlh:1.02;--dtt:none;--dls:0;--body:"Figtree",system-ui,sans-serif;--radius:12px;--hero:clamp(44px,9vw,84px);color-scheme:dark}
-body[data-theme=cafe]{--bg:#FFFDF8;--ink:#1D2A3A;--accent:#E84A2F;--accent2:#CFE6F5;--mute:#5A6878;--line:#C9D6E0;--card:#fff;--onaccent:#fff;--display:"Bricolage Grotesque","Trebuchet MS",sans-serif;--dw:800;--dlh:.98;--dtt:none;--dls:-.02em;--body:"Nunito Sans",system-ui,sans-serif;--radius:14px;--hero:clamp(48px,10vw,100px);color-scheme:light}
-body[data-theme=trades]{--bg:#0E1B2E;--ink:#F6F7F9;--accent:#FFD400;--accent2:#16273F;--mute:#9FB0C6;--line:#26395A;--card:#16273F;--onaccent:#0E1B2E;--display:"Barlow Condensed","Arial Narrow",sans-serif;--dw:800;--dlh:.92;--dtt:uppercase;--dls:0;--body:"Barlow",system-ui,sans-serif;--radius:8px;--hero:clamp(52px,11vw,116px);color-scheme:dark}
-body[data-theme=fitness]{--bg:#F5F5F2;--ink:#0F1114;--accent:#FF5A1F;--accent2:#0F1114;--mute:#5D6168;--line:#DCDCD6;--card:#fff;--onaccent:#fff;--display:"Archivo","Arial Black",sans-serif;--dw:900;--dlh:.95;--dtt:uppercase;--dls:0;--body:"Manrope",system-ui,sans-serif;--radius:10px;--hero:clamp(40px,10vw,116px);color-scheme:light}
-body[data-theme=fitness] h1,body[data-theme=fitness] h2,body[data-theme=fitness] h3{font-stretch:125%}
-.pv{background:#111;color:#fff;font:600 13px/1.4 system-ui,sans-serif;text-align:center;padding:8px 14px}
-.pv b{color:#FF8A5B}
-.bar{position:sticky;top:0;z-index:20;background:var(--bg);border-bottom:1.5px solid var(--line)}
-.bar .wrap{display:flex;align-items:center;justify-content:space-between;height:62px;gap:12px}
-.logo{font-family:var(--display);font-weight:var(--dw);text-transform:var(--dtt);font-size:22px;text-decoration:none;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:62vw}
-.status{font-size:12px;font-weight:600;display:flex;align-items:center;gap:7px;white-space:nowrap}
-.dot{width:9px;height:9px;border-radius:50%;background:var(--mute)}
-.dot.open{background:#1E8E4E;box-shadow:0 0 0 4px rgba(30,142,78,.15)}
-.hero{padding-block:36px 40px}
-.meta{display:flex;flex-wrap:wrap;gap:8px 16px;font-size:14px;font-weight:600;color:var(--mute);margin-bottom:16px}
-.meta .stars{color:var(--ink)}
-.hero h1{font-size:var(--hero);overflow-wrap:break-word}
-.hero h1 span{color:var(--accent)}
-.lede{max-width:40ch;font-size:19px;margin:20px 0 26px;color:var(--ink);opacity:.9}
-.ctas{display:flex;flex-wrap:wrap;gap:10px}
-.btn{font:700 16px/1 var(--body);border:1.5px solid var(--ink);border-radius:var(--radius);padding:16px 24px;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;justify-content:center;gap:8px;background:transparent;color:var(--ink)}
-.btn.primary{background:var(--accent);border-color:var(--accent);color:var(--onaccent)}
-.band{height:18px;background:var(--accent)}
-body[data-theme=barber] .band{height:46px;border-block:1.5px solid var(--ink);background:repeating-linear-gradient(-45deg,var(--accent) 0 22px,var(--bg) 22px 44px,var(--accent2) 44px 66px,var(--bg) 66px 88px)}
-body[data-theme=trades] .band{background:repeating-linear-gradient(-45deg,var(--accent) 0 16px,var(--bg) 16px 32px)}
-body[data-theme=salon] .band,body[data-theme=restaurant] .band{height:6px}
-section{padding:52px 0}
-.kicker{font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin-bottom:10px}
-section h2{font-size:clamp(38px,8vw,72px);margin-bottom:24px}
-.board{border-top:1.5px solid var(--ink)}
-.row{display:grid;grid-template-columns:1fr auto;gap:4px 16px;align-items:baseline;padding:16px 0;border-bottom:1px solid var(--line)}
-.row b{font-weight:700;font-size:18px}
-.row small{display:block;color:var(--mute);font-size:14px;font-weight:500}
-.row .price{font-family:var(--display);font-weight:var(--dw);font-size:26px;font-variant-numeric:tabular-nums;text-align:right;white-space:nowrap}
-.note{font-size:13px;color:var(--mute);margin-top:12px}
-.score{display:flex;align-items:baseline;gap:14px;margin-bottom:22px;flex-wrap:wrap}
-.score strong{font-family:var(--display);font-size:84px;font-weight:var(--dw);line-height:.8}
-.score em{font-style:normal;color:var(--mute);font-weight:600}
-.reviews{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px}
-.rev{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px}
-.rev .s{color:#E6A700;letter-spacing:2px;font-size:14px}
-.rev q{display:block;font-size:17px;font-weight:500;margin:10px 0 12px;quotes:none}
-.rev span{font-size:13px;color:var(--mute)}
-.visit{display:grid;grid-template-columns:1fr 1fr;gap:28px}
-.hours{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums}
-.hours td{padding:9px 0;border-bottom:1px solid var(--line)}
-.hours td:last-child{text-align:right;font-weight:600}
-.hours tr.today td{font-weight:800;color:var(--accent)}
-.addr{font-weight:600;font-size:19px}
-.contact{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
-.pitch{background:var(--accent2);color:#fff;border-radius:18px;padding:28px;margin-top:8px}
-body[data-theme=cafe] .pitch{color:var(--ink)}
-.pitch h3{font-size:30px;margin-bottom:8px}
-.pitch p{opacity:.9;max-width:60ch}
-footer{border-top:1.5px solid var(--line);padding:26px 0 36px;font-size:14px;color:var(--mute)}
-.dock{position:fixed;left:0;right:0;bottom:0;z-index:30;padding:12px 16px calc(12px + env(safe-area-inset-bottom));background:var(--bg);border-top:1.5px solid var(--line);display:flex;gap:10px;justify-content:center}
-.dock .btn{flex:1;max-width:340px}
-[hidden]{display:none!important}
-@media (max-width:720px){.visit{grid-template-columns:1fr}}
-@media (min-width:900px){body{padding-bottom:0}.dock{display:none}}
-@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+.wrap{max-width:1180px;margin:0 auto;padding:0 var(--pad)}
+.d{font-family:var(--display);font-weight:var(--dw);letter-spacing:var(--dls);line-height:var(--dlh);text-transform:var(--dtt);font-style:var(--dfs);overflow-wrap:break-word}
+.k{font:600 12px/1 var(--body);letter-spacing:.14em;text-transform:uppercase;color:var(--muted);display:flex;align-items:center;gap:10px}
+.k:before{content:"";width:22px;height:1px;background:currentColor;opacity:.6}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;height:54px;padding:0 26px;border-radius:var(--radius);font:600 15px/1 var(--body);text-decoration:none;border:1px solid transparent;cursor:pointer;transition:transform .2s,background .2s;white-space:nowrap}
+.btn:active{transform:scale(.98)}
+.btn-a{background:var(--accent);color:var(--accent-ink)}
+.btn-l{background:transparent;color:inherit;border-color:currentColor}
+.btn svg{width:18px;height:18px}
+/* preview ribbon */
+.pv{background:var(--dark);color:var(--on-dark);font:500 12.5px/1.35 var(--body);padding:9px var(--pad);text-align:center}
+.pv b{color:var(--accent);font-weight:600}body[data-theme=fitness] .pv b{color:var(--accent)}
+/* nav */
+.nav{position:absolute;top:auto;left:0;right:0;z-index:5;color:#fff}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:76px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;font:700 17px/1.1 var(--body);letter-spacing:-.01em;max-width:62%}
+.brand img{height:34px;width:auto;max-width:180px;object-fit:contain}
+.brand .mark{width:36px;height:36px;border-radius:50%;background:var(--accent);color:var(--accent-ink);display:grid;place-items:center;font:700 15px/1 var(--body);flex:none}
+.navcall{display:inline-flex;align-items:center;gap:8px;height:40px;padding:0 16px;border-radius:999px;background:rgba(255,255,255,.14);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.28);color:#fff;text-decoration:none;font:600 14px/1 var(--body)}
+.navcall svg{width:16px;height:16px}
+.navlinks{display:none;gap:28px;font:500 14px/1 var(--body)}
+.navlinks a{text-decoration:none;opacity:.9}
+@media(min-width:900px){.navlinks{display:flex}}
+/* hero */
+.hero{position:relative;min-height:min(92svh,860px);display:flex;align-items:flex-end;color:#fff;background:#222;overflow:hidden}
+.hero .ph{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1.04);animation:hz 14s ease-out forwards}
+@keyframes hz{to{transform:scale(1)}}
+.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.55) 0%,rgba(0,0,0,.08) 28%,rgba(0,0,0,.18) 50%,rgba(0,0,0,.82) 100%)}
+.hero .wrap{position:relative;z-index:2;width:100%;padding-bottom:clamp(34px,6vw,72px);padding-top:120px}
+.hero .loc{display:inline-flex;align-items:center;gap:8px;font:500 13px/1 var(--body);padding:8px 13px;border-radius:999px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.25);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);margin-bottom:22px}
+.hero .loc i{width:7px;height:7px;border-radius:50%;background:var(--accent);display:block}
+.hero h1{font-size:clamp(46px,12.5vw,128px);max-width:11ch}
+body[data-theme=restaurant] .hero h1{font-size:clamp(50px,14vw,150px)}
+body[data-theme=fitness] .hero h1{font-size:clamp(48px,13.5vw,140px)}
+.hero h1 em{font-style:var(--dfs);color:var(--accent);display:block}
+body[data-theme=barber] .hero h1 em,body[data-theme=salon] .hero h1 em,body[data-theme=cafe] .hero h1 em{font-style:italic}
+body[data-theme=salon] .hero h1 em,body[data-theme=cafe] .hero h1 em,body[data-theme=restaurant] .hero h1 em{color:#fff;opacity:.92}
+.hero p.lead{font-size:clamp(16px,2.1vw,19px);line-height:1.5;max-width:46ch;margin:22px 0 28px;color:rgba(255,255,255,.88)}
+.hero .ctas{display:flex;gap:12px;flex-wrap:wrap}
+.hero .btn-l{color:#fff;border-color:rgba(255,255,255,.55);backdrop-filter:blur(6px)}
+.rate{display:flex;align-items:center;gap:10px;margin-top:26px;font:500 14px/1.2 var(--body);color:rgba(255,255,255,.9)}
+.stars{color:#FFC94A;letter-spacing:2px;font-size:15px}
+/* trust strip */
+.strip{border-bottom:1px solid var(--line)}
+.strip .wrap{display:grid;grid-template-columns:repeat(2,1fr);gap:0}
+.strip div.it{padding:22px 0;font:500 14px/1.35 var(--body);color:var(--muted)}
+.strip div.it b{display:block;font:600 20px/1.1 var(--display);letter-spacing:-.01em;color:var(--ink);margin-bottom:4px;font-style:normal;text-transform:none}
+body[data-theme=restaurant] .strip div.it b{font-family:var(--body);font-weight:700}
+@media(min-width:800px){.strip .wrap{grid-template-columns:repeat(4,1fr)}}
+/* sections */
+section.s{padding:clamp(64px,10vw,120px) 0}
+.sh{display:grid;gap:18px;margin-bottom:clamp(30px,5vw,56px)}
+.sh h2{font-size:clamp(38px,8vw,76px);max-width:14ch}
+.sh p{color:var(--muted);max-width:48ch;font-size:17px}
+@media(min-width:900px){.sh{grid-template-columns:1.2fr 1fr;align-items:end}.sh .k{grid-column:1/-1}}
+/* services */
+.svc{list-style:none;border-top:1px solid var(--ink)}
+.svc li{display:grid;grid-template-columns:44px 1fr auto;gap:6px 14px;align-items:baseline;padding:22px 0;border-bottom:1px solid var(--line)}
+.svc .n{font:500 13px/1 var(--body);color:var(--muted);font-variant-numeric:tabular-nums}
+.svc h3{font:600 clamp(20px,3.2vw,26px)/1.15 var(--body);letter-spacing:-.02em}
+.svc p{grid-column:2/3;color:var(--muted);font-size:15px}
+.svc .pr{font:600 16px/1 var(--body);white-space:nowrap}
+.svc .ar{width:34px;height:34px;border-radius:50%;border:1px solid var(--line);display:grid;place-items:center;align-self:center;grid-row:1/3;grid-column:3}
+.svc .ar svg{width:14px;height:14px}
+.note{margin-top:18px;font-size:13.5px;color:var(--muted);display:flex;gap:8px;align-items:flex-start}
+.note:before{content:"✎";opacity:.7}
+/* gallery */
+.gal{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.gal figure{position:relative;overflow:hidden;border-radius:var(--card-radius);background:var(--bg2)}
+.gal figure:first-child{grid-column:1/-1;aspect-ratio:16/10}
+.gal figure:not(:first-child){aspect-ratio:4/5}
+.gal img{width:100%;height:100%;object-fit:cover}
+@media(min-width:900px){.gal{grid-template-columns:2fr 1fr 1fr}.gal figure:first-child{grid-column:auto;aspect-ratio:auto;grid-row:span 1;min-height:520px}.gal figure:not(:first-child){aspect-ratio:auto}}
+.cap{margin-top:12px;font-size:13px;color:var(--muted)}
+/* dark band: reviews */
+.dark{background:var(--dark);color:var(--on-dark)}
+.dark .k,.dark .sh p{color:color-mix(in srgb,var(--on-dark) 65%,transparent)}
+.revs{display:grid;gap:14px}
+@media(min-width:900px){.revs{grid-template-columns:repeat(3,1fr)}}
+.rev{border:1px solid color-mix(in srgb,var(--on-dark) 18%,transparent);border-radius:var(--card-radius);padding:28px;display:flex;flex-direction:column;gap:22px;justify-content:space-between}
+.rev q{font:400 clamp(20px,2.6vw,24px)/1.35 var(--display);letter-spacing:-.01em;quotes:"“" "”";font-style:var(--dfs);text-transform:none}
+body[data-theme=restaurant] .rev q,body[data-theme=fitness] .rev q,body[data-theme=trades] .rev q,body:not([data-theme]) .rev q{font-family:var(--body);font-weight:500;font-size:clamp(18px,2.3vw,21px);letter-spacing:-.015em}
+.rev .who{display:flex;align-items:center;justify-content:space-between;font-size:13.5px;opacity:.75}
+.big{display:flex;align-items:flex-end;gap:16px;margin-bottom:34px}
+.big .num{font:var(--dw) clamp(72px,16vw,150px)/.8 var(--display);letter-spacing:-.04em;font-style:normal}
+.big .lbl{padding-bottom:8px;font-size:15px;opacity:.85}
+/* steps */
+.steps{display:grid;gap:14px;counter-reset:st}
+@media(min-width:900px){.steps{grid-template-columns:repeat(3,1fr)}}
+.step{background:var(--bg2);border-radius:var(--card-radius);padding:28px;min-height:190px;display:flex;flex-direction:column;justify-content:space-between;gap:30px}
+.step:before{counter-increment:st;content:"0" counter(st);font:600 13px/1 var(--body);color:var(--muted)}
+.step h3{font:600 22px/1.15 var(--body);letter-spacing:-.02em;margin-bottom:8px}
+.step p{color:var(--muted);font-size:15px}
+/* info */
+.info{display:grid;gap:14px}
+@media(min-width:900px){.info{grid-template-columns:1fr 1fr}}
+.card{border:1px solid var(--line);border-radius:var(--card-radius);padding:28px;background:color-mix(in srgb,var(--bg) 60%,#fff)}
+.card h3{font:600 13px/1 var(--body);letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:18px}
+.hrs{list-style:none}
+.hrs li{display:flex;justify-content:space-between;padding:11px 0;border-bottom:1px solid var(--line);font-size:15px}
+.hrs li:last-child{border:0}
+.hrs li.today{font-weight:700}
+.open{display:inline-flex;align-items:center;gap:8px;font:600 13px/1 var(--body);padding:8px 12px;border-radius:999px;background:var(--bg2);margin-bottom:14px}
+.open i{width:8px;height:8px;border-radius:50%;background:#1DB954}.open.closed i{background:#E0473C}
+.areas{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px}
+.areas span{padding:9px 14px;border:1px solid var(--line);border-radius:999px;font-size:14px}
+.cl{list-style:none;display:grid;gap:4px}
+.cl a{display:flex;justify-content:space-between;align-items:center;padding:14px 0;border-bottom:1px solid var(--line);text-decoration:none;font-size:16px;font-weight:500}
+.cl a span{color:var(--muted);font-weight:400;font-size:14px}
+/* form */
+.form{display:grid;gap:12px;margin-top:6px}
+.form input,.form textarea,.form select{width:100%;font:400 16px/1.4 var(--body);padding:15px 16px;border-radius:12px;border:1px solid var(--line);background:var(--bg);color:var(--ink)}
+.form textarea{min-height:110px;resize:vertical}
+.form .btn{width:100%}
+.fmsg{display:none;font-size:14px;padding:14px 16px;border-radius:12px;background:var(--bg2)}
+/* cta band */
+.cta{background:var(--accent);color:var(--accent-ink);text-align:left}
+.cta h2{font-size:clamp(40px,9vw,96px);max-width:13ch;margin:18px 0 30px}
+.cta .k{color:inherit;opacity:.8}
+.cta .btn-a{background:var(--accent-ink);color:var(--accent)}
+.cta .btn-l{color:inherit}
+.cta .ctas{display:flex;gap:12px;flex-wrap:wrap}
+/* footer */
+footer{background:var(--dark);color:var(--on-dark);padding:56px 0 120px;font-size:14px}
+footer .wrap{display:grid;gap:26px}
+footer .fn{font:var(--dw) clamp(34px,7vw,64px)/.95 var(--display);letter-spacing:var(--dls);text-transform:var(--dtt);font-style:var(--dfs)}
+footer .row{display:flex;flex-wrap:wrap;gap:10px 26px;opacity:.75}
+/* pitch */
+.pitch{background:var(--bg);border-top:1px solid var(--line);padding:42px 0 130px}
+.pitch .box{border:1.5px dashed color-mix(in srgb,var(--ink) 35%,transparent);border-radius:var(--card-radius);padding:26px;display:grid;gap:12px;max-width:640px}
+.pitch h3{font:700 19px/1.25 var(--body);letter-spacing:-.01em}
+.pitch p{color:var(--muted);font-size:15px}
+.pitch a{font-weight:600}
+/* sticky mobile bar */
+.sticky{position:fixed;left:10px;right:10px;bottom:max(10px,env(safe-area-inset-bottom));z-index:20;display:grid;grid-template-columns:1fr 1fr;gap:8px;padding:8px;border-radius:calc(var(--radius) + 8px);background:color-mix(in srgb,var(--dark) 88%,transparent);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);box-shadow:0 10px 30px rgba(0,0,0,.25);transform:translateY(140%);transition:transform .35s}
+body[data-theme=restaurant] .sticky{border-radius:12px}
+.sticky.on{transform:none}
+.sticky .btn{height:50px;font-size:15px}
+.sticky .btn-l{color:var(--on-dark);border-color:color-mix(in srgb,var(--on-dark) 35%,transparent)}
+@media(min-width:900px){.sticky{display:none}}
+/* reveal */
+.rv{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
+.rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.rv{opacity:1;transform:none}.hero .ph{animation:none}}
 </style>
 </head>
-<body data-theme="barber">
-<div class="pv">Website preview made for <b id="pvName"></b> by The Site Dept. Not live, and not affiliated with the business.</div>
-<header class="bar"><div class="wrap">
-  <a class="logo" href="#top" id="logo"></a>
-  <div class="status"><span class="dot" id="dot"></span><span id="statusText"></span></div>
-</div></header>
+<body>
+<div class="pv" id="pv"></div>
+<header class="nav"><div class="wrap"><a class="brand" id="brand" href="#top"></a><nav class="navlinks" id="navlinks"></nav><a class="navcall" id="navcall"></a></div></header>
 <main id="top">
-  <div class="wrap hero">
-    <div class="meta" id="meta"></div>
-    <h1 id="headline"></h1>
-    <p class="lede" id="intro"></p>
-    <div class="ctas"><a class="btn primary" id="cta1"></a><a class="btn" href="#services" id="cta2"></a></div>
-  </div>
-  <div class="band" aria-hidden="true"></div>
-  <section id="services"><div class="wrap">
-    <div class="kicker" id="svcKicker"></div><h2 id="svcTitle"></h2>
-    <div class="board" id="svcList"></div>
-    <p class="note" id="svcNote"></p>
-  </div></section>
-  <section id="reviews" style="padding-top:0"><div class="wrap">
-    <div class="kicker">Reviews</div>
-    <div class="score" id="score"></div>
-    <div class="reviews" id="revList"></div>
-  </div></section>
-  <section id="visit" style="padding-top:0"><div class="wrap">
-    <div class="kicker">Visit</div><h2 id="visitTitle">Find us</h2>
-    <div class="visit">
-      <table class="hours" aria-label="Opening hours"><tbody id="hours"></tbody></table>
-      <div>
-        <p class="addr" id="addr"></p>
-        <div class="contact"><a class="btn" id="maps" target="_blank" rel="noopener">Get directions</a><a class="btn" id="call"></a></div>
-      </div>
-    </div>
-    <div class="pitch"><h3>Like what you see?</h3><p id="pitchText"></p></div>
-  </div></section>
+<section class="hero" id="hero"><img class="ph" id="heroImg" alt=""><div class="wrap">
+<div class="loc"><i></i><span id="loc"></span></div>
+<h1 class="d" id="h1"></h1>
+<p class="lead" id="lead"></p>
+<div class="ctas" id="heroCtas"></div>
+<div class="rate" id="heroRate"></div>
+</div></section>
+<div class="strip"><div class="wrap" id="strip"></div></div>
+<section class="s" id="services"><div class="wrap">
+<div class="sh rv"><div class="k" id="svcK"></div><h2 class="d" id="svcT"></h2><p id="svcP"></p></div>
+<ul class="svc" id="svc"></ul><div class="note" id="svcNote"></div>
+</div></section>
+<section class="s" id="gallerySec" style="padding-top:0"><div class="wrap">
+<div class="gal rv" id="gal"></div><div class="cap" id="galCap"></div>
+</div></section>
+<section class="s dark" id="reviews"><div class="wrap">
+<div class="big rv" id="big"></div>
+<div class="sh rv" style="margin-bottom:34px"><div class="k">What customers say</div><h2 class="d" id="revT"></h2></div>
+<div class="revs" id="revs"></div>
+</div></section>
+<section class="s" id="how"><div class="wrap">
+<div class="sh rv"><div class="k" id="howK"></div><h2 class="d" id="howT"></h2></div>
+<div class="steps" id="steps"></div>
+</div></section>
+<section class="s" id="contact" style="padding-top:0"><div class="wrap">
+<div class="sh rv"><div class="k">Find us</div><h2 class="d" id="conT"></h2><p id="conP"></p></div>
+<div class="info">
+<div class="card rv" id="cardA"></div>
+<div class="card rv" id="cardB"></div>
+</div>
+</div></section>
+<section class="s cta"><div class="wrap rv">
+<div class="k" id="ctaK"></div><h2 class="d" id="ctaT"></h2><div class="ctas" id="ctaB"></div>
+</div></section>
 </main>
-<footer><div class="wrap" id="foot"></div></footer>
-<div class="dock"><a class="btn primary" id="dock1"></a><a class="btn" id="dock2">Call</a></div>
-<script id="data" type="application/json">{"theme": "trades", "name": "Tysoe Resto Shed", "shortName": "Tysoe Resto Shed", "rating": "", "reviewCount": "", "tagline": "Tysoe, Warwickshire", "headline": ["Classic cars.", "Brought back to life."], "intro": "Tysoe Resto Shed: car restoration specialists in Tysoe, Warwickshire. Tell us about your car and get a clear, honest quote.", "cta": {"label": "Get a free quote", "url": ""}, "secondaryLabel": "See services", "phone": "", "address": "Tysoe, Warwickshire", "servicesKicker": "What we do", "servicesTitle": "Services", "services": [{"name": "Full car restoration", "desc": "Ground-up, done properly", "price": ""}, {"name": "Bodywork & rust repair", "desc": "Panels, welding and prep", "price": ""}, {"name": "Mechanical work", "desc": "Getting it running right", "price": ""}, {"name": "Project assessment", "desc": "Tell us about the car and we'll advise", "price": ""}], "servicesNote": "Your real services, photos and prices go here.", "reviews": [], "hours": {}}</script>
+<footer><div class="wrap"><div class="fn" id="fn"></div><div class="row" id="frow"></div></div></footer>
+<div class="pitch"><div class="wrap"><div class="box" id="pitch"></div></div></div>
+<div class="sticky" id="sticky"></div>
+<script id="data" type="application/json">{"theme": "trades", "accent": "#B8894A", "accentInk": null, "name": "Tysoe Resto Shed", "shortName": "Tysoe Resto Shed", "logo": null, "kicker": "Restoration · Lower Tysoe, Warwickshire", "headline": ["Restored", "the right way."], "intro": "A local restoration workshop at Orchard Farm Nursery in Lower Tysoe. Tell us about your project and we’ll talk it through.", "cta": {"label": "Get a free quote", "url": ""}, "phone": "01295680391", "phoneDisplay": "01295 680391", "whatsapp": "", "email": "info@tysoerestoshed.co.uk", "rating": "", "reviewCount": "", "facts": [["Local", "Lower Tysoe, South Warwickshire"], ["Since 2023", "Tysoe Resto Shed Ltd"], ["Car restoration", "projects big and small"], ["Free chat", "about your project"]], "servicesKicker": "What we do", "servicesTitle": "Services", "servicesIntro": "", "services": [{"name": "Restoration projects", "desc": "Tell us what you’ve got and what you want it to be", "price": ""}, {"name": "Car restoration", "desc": "From tired to proud: bodywork, mechanics and finish", "price": ""}, {"name": "Repairs & refurbishment", "desc": "Sympathetic work that keeps the character", "price": ""}, {"name": "Project assessment", "desc": "Not sure where to start? We’ll take a look and advise", "price": ""}], "servicesNote": "Photos of your past projects and your full service list go here.", "photos": {"hero": "https://images.unsplash.com/photo-1591278169757-deac26e49555?auto=format&fit=crop&w=1600&q=70", "heroPos": null, "gallery": ["https://images.unsplash.com/photo-1522775644932-1e20a2479066?auto=format&fit=crop&w=1600&q=70", "https://images.unsplash.com/photo-1626995587693-c50c9a5544c6?auto=format&fit=crop&w=1600&q=70", "https://images.unsplash.com/photo-1534093607318-f025413f49cb?auto=format&fit=crop&w=1600&q=70"], "stock": true, "caption": "Placeholder photos. We’d use real photos of your work."}, "reviews": [], "reviewsTitle": null, "stepsKicker": "How it works", "stepsTitle": "Sorted, without the hassle.", "steps": [["Tell us about it", "Call or send a few photos of what you’ve got."], ["We talk it through", "What’s possible, how long, and a clear idea of cost."], ["We get to work", "Careful, honest restoration, with updates as we go."]], "contactTitle": "Get in touch.", "contactIntro": "", "hours": {}, "areas": [], "aboutLine": "", "mapsQuery": "Orchard Farm Nursery, Lower Tysoe, CV35 0BU", "addressShort": "Orchard Farm Nursery, Lower Tysoe CV35 0BU", "formTitle": "Ask for a free quote", "formButton": "Request my quote", "formPlaceholder": "What’s the job? Postcode helps too.", "ctaTitle": "Got a project in mind?", "stickyLabel": "Free quote", "companyLine": "Tysoe Resto Shed Ltd · Co. no. 14875112", "pitchEmail": "", "pitchName": "Dheer"}</script>
 <script>
 (function(){
-  const S=JSON.parse(document.getElementById("data").textContent);
-  const esc=s=>String(s??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
-  const $=id=>document.getElementById(id);
-  document.body.dataset.theme=S.theme;
-  $("pvName").textContent=S.name;$("logo").textContent=S.shortName||S.name;
-  const m=[];if(S.rating)m.push(`<span class="stars">★★★★★ ${esc(S.rating)}</span>`);if(S.reviewCount)m.push(`<span>${esc(S.reviewCount)} Google reviews</span>`);if(S.tagline)m.push(`<span>${esc(S.tagline)}</span>`);
-  $("meta").innerHTML=m.join("");
-  $("headline").innerHTML=`${esc(S.headline[0])}<br><span>${esc(S.headline[1])}</span>`;
-  $("intro").textContent=S.intro;
-  const tel="tel:"+(S.phone||"").replace(/[^\d+]/g,"");
-  const primary=S.cta||{label:"Call us",url:tel};
-  [$("cta1"),$("dock1")].forEach(a=>{a.textContent=primary.label;a.href=primary.url||tel;if(/^https?:/.test(a.href)){a.target="_blank";a.rel="noopener"}});
-  $("cta2").textContent=S.secondaryLabel||"See prices";
-  $("dock2").href=tel;$("call").href=tel;$("call").textContent="Call "+(S.phone||"");if(!S.phone){$("call").hidden=true;$("dock2").hidden=true}
-  $("svcKicker").textContent=S.servicesKicker||"Price list";$("svcTitle").textContent=S.servicesTitle||"What it costs";
-  $("svcList").innerHTML=(S.services||[]).map(s=>`<div class="row"><div><b>${esc(s.name)}</b><small>${esc(s.desc||"")}</small></div><span class="price">${esc(s.price||"")}</span></div>`).join("");
-  $("svcNote").textContent=S.servicesNote||"";
-  const R=S.reviews||[];$("reviews").hidden=!R.length;
-  $("score").innerHTML=S.rating?`<strong>${esc(S.rating)}</strong><em>from ${esc(S.reviewCount)} Google reviews</em>`:"";
-  $("revList").innerHTML=R.map(r=>`<div class="rev"><div class="s">★★★★★</div><q>${esc(r.text)}</q><span>${esc(r.who||"Google review")}</span></div>`).join("");
-  $("visitTitle").textContent=S.visitTitle||"Find us";
-  $("addr").textContent=S.address||"";
-  $("maps").href="https://www.google.com/maps/search/?api=1&query="+encodeURIComponent(S.name+" "+(S.address||""));
-  $("pitchText").textContent=`This is a free preview of what ${S.name}'s website could look like, made by The Site Dept. If you'd like it live, with your own photos, prices and booking link, just reply to the email.`;
-  $("foot").textContent=`Preview by The Site Dept. for ${S.name}. Business details and reviews from public listings; prices and wording are placeholders until confirmed.`;
-  document.title=`${S.name} | Website preview`;
-  const days=["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],H=S.hours||{};
-  const fmt=x=>{if(x>=23.98)return "midnight";const mm=Math.round((x%1)*60),hh=Math.floor(x)%24;return(((hh+11)%12)+1)+(mm?":"+String(mm).padStart(2,"0"):"")+(hh>=12?"pm":"am")};
-  let now;try{now=new Date(new Date().toLocaleString("en-US",{timeZone:"Europe/London"}))}catch(e){now=new Date()}
-  const d=now.getDay(),t=now.getHours()+now.getMinutes()/60,isOpen=i=>{const v=H[days[i]];return v&&v[1]>v[0]};
-  if(!Object.keys(H).length){$("hours").innerHTML="";$("statusText").textContent="";}
-  else{
-    $("hours").innerHTML=[1,2,3,4,5,6,0].map(i=>{const v=H[days[i]];return`<tr class="${i===d?"today":""}"><td>${days[i]}</td><td>${isOpen(i)?fmt(v[0])+" – "+fmt(v[1]):"Closed"}</td></tr>`}).join("");
-    let txt="";if(isOpen(d)&&t>=H[days[d]][0]&&t<H[days[d]][1]){txt="Open till "+fmt(H[days[d]][1]);$("dot").classList.add("open")}
-    else if(isOpen(d)&&t<H[days[d]][0])txt="Opens "+fmt(H[days[d]][0]);
-    else for(let k=1;k<=7;k++){const j=(d+k)%7;if(isOpen(j)){txt="Opens "+(k===1?"tomorrow ":days[j].slice(0,3)+" ")+fmt(H[days[j]][0]);break}}
-    $("statusText").textContent=txt;
-  }
+var D=JSON.parse(document.getElementById('data').textContent);
+document.body.setAttribute('data-theme',D.theme);
+if(D.accent){document.documentElement.style.setProperty('--accent',D.accent);document.body.style.setProperty('--accent',D.accent)}
+if(D.accentInk){document.body.style.setProperty('--accent-ink',D.accentInk)}
+var $=function(id){return document.getElementById(id)};
+var esc=function(s){return String(s==null?'':s).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})};
+var ICON={phone:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>',arrow:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M7 17 17 7M8 7h9v9"/></svg>',wa:'<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.5-3.9-4.7-4.1-.1-.2-1.1-1.5-1.1-2.9s.7-2.1 1-2.4c.3-.3.6-.3.8-.3h.6c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .5l-.3.5-.4.5c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.6-.1l2 .9c.3.1.5.2.5.3.1.2.1.7-.1 1.3z"/></svg>'};
+var tel=D.phone?('tel:'+D.phone.replace(/\s+/g,'')):'';
+var primary=D.cta&&D.cta.url?D.cta.url:'#quote';
+var primaryLbl=(D.cta&&D.cta.label)||'Get in touch';
+document.title=D.name+' | Website preview';
+$('pv').innerHTML='Free website preview made for <b>'+esc(D.name)+'</b> by The Site Dept. Not the live site.';
+// brand
+$('brand').innerHTML=D.logo?'<img src="'+esc(D.logo)+'" alt="'+esc(D.name)+'">':'<span class="mark">'+esc((D.shortName||D.name).replace(/[^A-Za-z0-9 ]/g,'').split(' ').filter(Boolean).slice(0,2).map(function(w){return w[0]}).join('').toUpperCase())+'</span><span>'+esc(D.shortName||D.name)+'</span>';
+$('navlinks').innerHTML='<a href="#services">'+esc(D.servicesTitle)+'</a>'+(D.reviews&&D.reviews.length?'<a href="#reviews">Reviews</a>':'')+'<a href="#contact">Contact</a>';
+if(tel){$('navcall').href=tel;$('navcall').innerHTML=ICON.phone+'<span>'+esc(D.phoneDisplay||D.phone)+'</span>'}else{$('navcall').href=primary;$('navcall').textContent=primaryLbl}
+// hero
+$('heroImg').src=D.photos.hero;$('heroImg').alt=D.photos.heroAlt||'';
+if(D.photos.heroPos)$('heroImg').style.objectPosition=D.photos.heroPos;
+$('loc').textContent=D.kicker;
+$('h1').innerHTML=esc(D.headline[0])+'<em>'+esc(D.headline[1])+'</em>';
+$('lead').textContent=D.intro;
+var heroC='<a class="btn btn-a" href="'+esc(primary)+'">'+esc(primaryLbl)+'</a>';
+if(tel&&primary!==tel)heroC+='<a class="btn btn-l" href="'+tel+'">'+ICON.phone+'Call '+esc(D.phoneDisplay||D.phone)+'</a>';
+else heroC+='<a class="btn btn-l" href="#services">'+esc(D.secondaryLabel||'See more')+'</a>';
+$('heroCtas').innerHTML=heroC;
+if(D.rating){$('heroRate').innerHTML='<span class="stars">★★★★★</span><span><b>'+esc(D.rating)+'</b> from '+esc(D.reviewCount)+' Google reviews</span>'}else $('heroRate').remove();
+// strip
+$('strip').innerHTML=(D.facts||[]).slice(0,4).map(function(f){return '<div class="it"><b>'+esc(f[0])+'</b>'+esc(f[1])+'</div>'}).join('');
+if(!(D.facts||[]).length)$('strip').parentNode.remove();
+// services
+$('svcK').textContent=D.servicesKicker;$('svcT').textContent=D.servicesTitle;$('svcP').textContent=D.servicesIntro||'';
+$('svc').innerHTML=D.services.map(function(s,i){return '<li class="rv"><span class="n">'+(i<9?'0':'')+(i+1)+'</span><h3>'+esc(s.name)+'</h3>'+(s.price?'<span class="pr">'+esc(s.price)+'</span>':'<span class="ar">'+ICON.arrow+'</span>')+'<p>'+esc(s.desc)+'</p></li>'}).join('');
+if(D.servicesNote)$('svcNote').textContent=D.servicesNote;else $('svcNote').remove();
+// gallery
+var g=D.photos.gallery||[];
+if(g.length>=3){$('gal').innerHTML=g.slice(0,3).map(function(u){return '<figure><img loading="lazy" src="'+esc(u)+'" alt=""></figure>'}).join('');$('galCap').textContent=D.photos.caption||''}else $('gallerySec').remove();
+// reviews
+var R=D.reviews||[];
+if(R.length){
+ if(D.rating)$('big').innerHTML='<div class="num">'+esc(D.rating)+'</div><div class="lbl"><span class="stars">★★★★★</span><br>'+esc(D.reviewCount)+' reviews on Google</div>';else $('big').remove();
+ $('revT').textContent=D.reviewsTitle||'Don’t just take our word for it.';
+ $('revs').innerHTML=R.map(function(r){return '<div class="rev rv"><q>'+esc(r.text)+'</q><div class="who"><span>'+esc(r.who||'Google review')+'</span><span class="stars">★★★★★</span></div></div>'}).join('');
+}else $('reviews').remove();
+// steps
+if(D.steps&&D.steps.length){$('howK').textContent=D.stepsKicker||'How it works';$('howT').textContent=D.stepsTitle||'Simple from start to finish.';
+ $('steps').innerHTML=D.steps.map(function(s){return '<div class="step rv"><div><h3>'+esc(s[0])+'</h3><p>'+esc(s[1])+'</p></div></div>'}).join('')}else $('how').remove();
+// contact
+$('conT').textContent=D.contactTitle||'Get in touch.';$('conP').textContent=D.contactIntro||'';
+var A='';
+var days=['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'];
+var H=D.hours||{};
+function fmt(t){if(t>=23.98)return 'midnight';var h=Math.floor(t),m=Math.round((t-h)*60);var ap=h>=12?'pm':'am';var hh=h%12||12;return hh+(m?':'+(m<10?'0':'')+m:'')+ap}
+if(Object.keys(H).length){
+ var now=new Date(new Date().toLocaleString('en-US',{timeZone:'Europe/London'}));var di=(now.getDay()+6)%7;var cur=now.getHours()+now.getMinutes()/60;var td=H[days[di]];
+ var isOpen=td&&td[1]>td[0]&&cur>=td[0]&&cur<td[1];
+ A+='<h3>Opening hours</h3><div class="open'+(isOpen?'':' closed')+'"><i></i>'+(isOpen?'Open now · until '+fmt(td[1]):'Closed now')+'</div><ul class="hrs">'+days.map(function(d,i){var v=H[d];return '<li'+(i===di?' class="today"':'')+'><span>'+d+'</span><span>'+(!v?'—':(v[1]<=v[0]?'Closed':fmt(v[0])+' – '+fmt(v[1])))+'</span></li>'}).join('')+'</ul>';
+}else if(D.areas&&D.areas.length){
+ A+='<h3>Areas we cover</h3><div class="areas">'+D.areas.map(function(a){return '<span>'+esc(a)+'</span>'}).join('')+'</div>';
+ if(D.aboutLine)A+='<p style="margin-top:22px;color:var(--muted);font-size:15px">'+esc(D.aboutLine)+'</p>';
+}
+var cl='';
+if(tel)cl+='<a href="'+tel+'">Call<span>'+esc(D.phoneDisplay||D.phone)+'</span></a>';
+if(D.whatsapp)cl+='<a href="https://wa.me/'+esc(D.whatsapp)+'">WhatsApp<span>Message us</span></a>';
+if(D.email)cl+='<a href="mailto:'+esc(D.email)+'">Email<span>'+esc(D.email)+'</span></a>';
+if(D.mapsQuery)cl+='<a href="https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(D.mapsQuery)+'">Directions<span>'+esc(D.addressShort||'Open in Maps')+'</span></a>';
+A+=(A?'<h3 style="margin-top:30px">Contact</h3>':'<h3>Contact</h3>')+'<div class="cl">'+cl+'</div>';
+$('cardA').innerHTML=A;
+$('cardB').id='quote';
+$('quote').innerHTML='<h3>'+esc(D.formTitle||'Ask for a quote')+'</h3><form class="form" onsubmit="event.preventDefault();this.style.display=\'none\';this.nextElementSibling.style.display=\'block\'"><input required placeholder="Your name" autocomplete="name"><input required placeholder="Phone or email"><textarea placeholder="'+esc(D.formPlaceholder||'What do you need?')+'"></textarea><button class="btn btn-a" type="submit">'+esc(D.formButton||'Send')+'</button></form><div class="fmsg">This is a preview, so nothing was sent. On the live site, messages from this form go straight to your inbox.</div>';
+// cta band
+$('ctaK').textContent=D.kicker;$('ctaT').textContent=D.ctaTitle||'Ready when you are.';
+$('ctaB').innerHTML=(tel?'<a class="btn btn-a" href="'+tel+'">'+ICON.phone+'Call now</a>':'')+'<a class="btn btn-l" href="'+esc(primary)+'">'+esc(primaryLbl)+'</a>';
+// footer
+$('fn').textContent=D.shortName||D.name;
+$('frow').innerHTML=[D.addressShort,D.phoneDisplay||D.phone,D.email,D.companyLine].filter(Boolean).map(function(x){return '<span>'+esc(x)+'</span>'}).join('')+'<span>© '+new Date().getFullYear()+'</span>';
+// pitch
+$('pitch').innerHTML='<h3>Like what you see?</h3><p>This is a free preview made for '+esc(D.name)+' by <b>The Site Dept.</b> It isn’t live, and it isn’t affiliated with the business. '+(D.photos.stock?'The photos are placeholders; we’d swap in your own. ':'')+'If you’d like it on your own domain, it can be live within a week, with your real prices, photos and details.</p><p>'+(D.pitchEmail?'Reply to the email this came with, or <a href="mailto:'+esc(D.pitchEmail)+'?subject='+encodeURIComponent('Website for '+D.name)+'">email '+esc(D.pitchName||'us')+'</a>.':'Just reply to the email this link came with.')+'</p>';
+// sticky bar
+$('sticky').innerHTML=(tel?'<a class="btn btn-l" href="'+tel+'">'+ICON.phone+'Call</a>':'<a class="btn btn-l" href="#contact">Contact</a>')+'<a class="btn btn-a" href="'+esc(primary)+'">'+esc(D.stickyLabel||primaryLbl)+'</a>';
+var st=$('sticky');addEventListener('scroll',function(){st.classList.toggle('on',scrollY>window.innerHeight*.6)},{passive:true});
+// reveal
+var io='IntersectionObserver' in window?new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px'}):null;
+document.querySelectorAll('.rv').forEach(function(el){io?io.observe(el):el.classList.add('in')});
 })();
 </script>
 </body>

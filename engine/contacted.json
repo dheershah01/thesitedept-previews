@@ -1,7 +1,31 @@
-{"note": "Companies House numbers already drafted/contacted. Never email these again unless they reply.",
+{
+ "note": "Companies House numbers already drafted/contacted. Never email these again unless they reply.",
  "contacted": [
-  {"company_number": "12827654", "name": "Unison Electrical Ltd", "drafted": "2026-11-12", "status": "draft"},
-  {"company_number": "10848814", "name": "Meridian Heating & Plumbing Ltd", "drafted": "2026-11-12", "status": "draft"},
-  {"company_number": "14875112", "name": "Tysoe Resto Shed Ltd", "drafted": "2026-11-12", "status": "draft"}
+  {
+   "company_number": "12827654",
+   "name": "Unison Electrical Ltd",
+   "drafted": "2026-11-12",
+   "status": "draft"
+  },
+  {
+   "company_number": "10848814",
+   "name": "Meridian Heating & Plumbing Ltd",
+   "drafted": "2026-11-12",
+   "status": "draft"
+  },
+  {
+   "company_number": "14875112",
+   "name": "Tysoe Resto Shed Ltd",
+   "drafted": "2026-11-12",
+   "status": "draft"
+  }
  ],
- "suppressed": []}
+ "suppressed": [
+  {
+   "name": "Fade & Blade (Fade N Blade), 32-34 Queen's Road, Coventry CV1 3EH",
+   "phone": "07429 039370",
+   "date": "2026-11-13",
+   "reason": "Said not interested via WhatsApp"
+  }
+ ]
+}

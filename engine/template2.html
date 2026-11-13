@@ -240,7 +240,7 @@ if(D.order&&D.order.url)heroC+='<a class="btn btn-l" href="'+esc(D.order.url)+'"
 else if(tel&&primary!==tel)heroC+='<a class="btn btn-l" href="'+tel+'">'+ICON.phone+'Call '+esc(D.phoneDisplay||D.phone)+'</a>';
 else heroC+='<a class="btn btn-l" href="#services">'+esc(D.secondaryLabel||'See more')+'</a>';
 $('heroCtas').innerHTML=heroC;
-if(D.rating){$('heroRate').innerHTML='<span class="stars">★★★★★</span><span><b>'+esc(D.rating)+'</b> from '+esc(D.reviewCount)+' Google reviews</span>'}else $('heroRate').remove();
+if(D.rating){$('heroRate').innerHTML='<span class="stars">★★★★★</span><span><b>'+esc(D.rating)+'</b> from '+esc(D.reviewCount)+' '+esc(D.ratingSource||'Google')+' reviews</span>'}else $('heroRate').remove();
 // strip
 $('strip').innerHTML=(D.facts||[]).slice(0,4).map(function(f){return '<div class="it"><b>'+esc(f[0])+'</b>'+esc(f[1])+'</div>'}).join('');
 if(!(D.facts||[]).length)$('strip').parentNode.remove();
@@ -254,7 +254,7 @@ if(g.length>=3){$('gal').innerHTML=g.slice(0,3).map(function(u){return '<figure>
 // reviews
 var R=D.reviews||[];
 if(R.length){
- if(D.rating)$('big').innerHTML='<div class="num">'+esc(D.rating)+'</div><div class="lbl"><span class="stars">★★★★★</span><br>'+esc(D.reviewCount)+' reviews on Google</div>';else $('big').remove();
+ if(D.rating)$('big').innerHTML='<div class="num">'+esc(D.rating)+'</div><div class="lbl"><span class="stars">★★★★★</span><br>'+esc(D.reviewCount)+' reviews on '+esc(D.ratingSource||'Google')+'</div>';else $('big').remove();
  $('revT').textContent=D.reviewsTitle||'Don’t just take our word for it.';
  $('revs').innerHTML=R.map(function(r){return '<div class="rev rv"><q>'+esc(r.text)+'</q><div class="who"><span>'+esc(r.who||'Google review')+'</span><span class="stars">★★★★★</span></div></div>'}).join('');
 }else $('reviews').remove();

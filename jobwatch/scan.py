@@ -13,7 +13,7 @@ import json, os, sys, time, urllib.parse, urllib.request
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 SEEN = os.path.join(HERE, "seen.json")
-API = "https://www.freelancer.com/api/projects/0.1/projects/active/"
+API = "https://www.freelancer.co.uk/api/projects/0.1/projects/active/"
 
 # Searches for work Claude can produce as files (spreadsheets, documents, code, writing).
 QUERIES = [
@@ -127,7 +127,7 @@ def main():
             "budget_gbp": f"£{lo:.0f}–£{hi:.0f}",
             "original": f"{p['currency']['code']} {b.get('minimum'):.0f}–{b.get('maximum'):.0f}",
             "bids": bids, "age_min": round(age_h * 60),
-            "url": "https://www.freelancer.com/projects/" + (p.get("seo_url") or str(p["id"])),
+            "url": "https://www.freelancer.co.uk/projects/" + (p.get("seo_url") or str(p["id"])),
             "preview": desc.strip().replace("\n", " ")[:200],
             "score": round(score, 3),
         })
